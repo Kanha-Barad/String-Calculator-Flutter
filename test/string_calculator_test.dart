@@ -16,4 +16,12 @@ void main() {
     expect(calc.add('1'), 1);
     expect(calc.add('42'), 42);
   });
+
+  test('handles two numbers', () {
+    expect(calc.add('1,5'), 6);
+  });
+
+  test('handles any amount of numbers', () {
+    expect(calc.add('1,2,3,4,5'), 15);
+  });
 }

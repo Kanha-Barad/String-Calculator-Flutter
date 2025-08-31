@@ -1,5 +1,9 @@
 # 📱 String Calculator Flutter
 
+![Flutter](https://img.shields.io/badge/Flutter-2.20-blue?logo=flutter)
+![Dart](https://img.shields.io/badge/Dart-2.19-blue?logo=dart)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 A **Flutter project** that implements a simple yet extensible **String Calculator**.  
 This project demonstrates clean coding practices, unit testing in Flutter, and GitHub integration.
 
@@ -14,9 +18,16 @@ This project demonstrates clean coding practices, unit testing in Flutter, and G
 
 ---
 
-## 🛠️ Getting Started
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/Kanha-Barad/String-Calculator-Flutter.git
-cd String-Calculator-Flutter
+## 📂 Folder Structure
+```text
+stringcalculator/
+├── lib/
+│   ├── core/
+│   │   └── string_calculator.dart
+│   ├── main.dart
+│   └── screens/
+│       └── calculator_screen.dart
+├── test/
+│   └── string_calculator_test.dart
+├── LICENSE
+└── README.md

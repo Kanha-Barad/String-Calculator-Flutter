@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:string_calculator_flutter/string_calculator.dart';
+import 'package:string_calculator_flutter/core/string_calculator.dart';
 
 class CalculatorScreen extends StatefulWidget {
   const CalculatorScreen({super.key});

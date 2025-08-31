@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:string_calculator_flutter/string_calculator.dart';
+import 'package:string_calculator_flutter/core/string_calculator.dart';
 
 void main() {
   late StringCalculator calc;

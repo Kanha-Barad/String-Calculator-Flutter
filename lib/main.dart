@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:string_calculator_flutter/home_page.dart';
 
 void main() {
@@ -14,13 +15,11 @@ class StringCalculatorApp extends StatelessWidget {
       title: 'String Calculator',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
-        textTheme: const TextTheme(
-          bodyMedium: TextStyle(fontSize: 16),
-        ),
+        textTheme: GoogleFonts.poppinsTextTheme(),
+        primarySwatch: Colors.indigo,
+        scaffoldBackgroundColor: const Color(0xFFF4F6FA),
       ),
-      home: const HomePage(),
+      home: const CalculatorScreen(),
     );
   }
 }

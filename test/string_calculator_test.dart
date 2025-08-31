@@ -30,4 +30,9 @@ void main() {
     expect(calc.add('10\n20\n30'), 60);
   });
 
+  test('supports custom single-char delimiter', () {
+    expect(calc.add('//;\n1;2'), 3);
+    expect(calc.add('//|\n4|6|10'), 20);
+  });
+
 }

@@ -11,7 +11,16 @@ class StringCalculator {
         throw FormatException('Invalid input: missing newline after delimiter header');
       }
       final header = input.substring(2, newlineIdx);
-      delims.add(header);
+
+      if (header.startsWith('[') && header.endsWith(']')) {
+        final pattern = RegExp(r'\[(.*?)\]');
+        for (final m in pattern.allMatches(header)) {
+          final d = m.group(1);
+          if (d != null && d.isNotEmpty) delims.add(d);
+        }
+      } else {
+        delims.add(header);
+      }
       body = input.substring(newlineIdx + 1);
     }
 

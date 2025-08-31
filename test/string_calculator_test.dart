@@ -11,4 +11,9 @@ void main() {
   test('returns 0 for empty string', () {
     expect(calc.add(''), 0);
   });
+
+  test('returns the number for single value', () {
+    expect(calc.add('1'), 1);
+    expect(calc.add('42'), 42);
+  });
 }

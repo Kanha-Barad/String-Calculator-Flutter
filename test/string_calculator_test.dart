@@ -24,4 +24,10 @@ void main() {
   test('handles any amount of numbers', () {
     expect(calc.add('1,2,3,4,5'), 15);
   });
+
+  test('handles newlines between numbers', () {
+    expect(calc.add('1\n2,3'), 6);
+    expect(calc.add('10\n20\n30'), 60);
+  });
+
 }

@@ -26,7 +26,17 @@ class StringCalculator {
 
     final splitter = RegExp(delims.map(RegExp.escape).join('|'));
     final parts = body.isEmpty ? <String>[] : body.split(splitter);
-    final ints = parts.where((p) => p.isNotEmpty).map((p) => int.parse(p)).toList();
-    return ints.fold(0, (a, b) => a + b);
+
+    final values = parts
+        .where((p) => p.isNotEmpty)
+        .map((p) => int.parse(p))
+        .toList();
+
+    final negatives = values.where((v) => v < 0).toList();
+    if (negatives.isNotEmpty) {
+      throw Exception('negative numbers not allowed ${negatives.join(',')}');
+    }
+
+    return values.fold(0, (a, b) => a + b);
   }
 }

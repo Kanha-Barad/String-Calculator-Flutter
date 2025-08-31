@@ -40,4 +40,23 @@ void main() {
     expect(calc.add('//[abc]\n7abc8abc9'), 24);
   });
 
+  test('throws for single negative number', () {
+    expect(() => calc.add('1,-2,3'), throwsA(isA<Exception>()));
+    try {
+      calc.add('1,-2,3');
+      fail('Expected exception for negative');
+    } catch (e) {
+      expect(e.toString(), contains('negative numbers not allowed -2'));
+    }
+  });
+
+  test('throws listing all negative numbers', () {
+    try {
+      calc.add('-1,2,-3,-5');
+      fail('Expected exception');
+    } catch (e) {
+      expect(e.toString(), contains('negative numbers not allowed -1,-3,-5'));
+    }
+  });
+
 }

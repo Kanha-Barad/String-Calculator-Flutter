@@ -35,4 +35,9 @@ void main() {
     expect(calc.add('//|\n4|6|10'), 20);
   });
 
+  test('supports custom multi-length delimiter with brackets', () {
+    expect(calc.add('//[***]\n1***2***3'), 6);
+    expect(calc.add('//[abc]\n7abc8abc9'), 24);
+  });
+
 }

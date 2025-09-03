@@ -12,6 +12,7 @@ class StringCalculatorApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'String Calculator',
       theme: ThemeData(
         primarySwatch: Colors.indigo,
